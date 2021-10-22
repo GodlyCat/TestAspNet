@@ -100,7 +100,7 @@ namespace WebApplication1.Controllers
                 if (uploadedFile != null)
                 {
                     // путь к папке Files
-                    string path = "/Files/" + id + uploadedFile.FileName.Split('.')[1];
+                    string path = "/Files/" + id+ "." + uploadedFile.FileName.Split('.')[1];
                     // сохраняем файл в папку Files в каталоге wwwroot
                     using (var fileStream = new FileStream(ae.WebRootPath + path, FileMode.Create))
                     {
